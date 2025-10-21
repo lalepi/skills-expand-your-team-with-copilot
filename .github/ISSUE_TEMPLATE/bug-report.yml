@@ -1,0 +1,110 @@
+name: Report a Bug
+description: Something isn't working correctly? Let us know!
+title: "[Bug] "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Report a Bug
+        Help us fix issues by providing clear information about what's not working.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What went wrong?
+      description: Describe what happened in simple terms
+      placeholder: |
+        Example: "When I try to sign up a student for Chess Club, I get an error message"
+        Example: "The activities page doesn't show any activities on Saturdays"
+        Example: "Student names are not appearing after I register them"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should happen instead?
+      description: What did you expect to happen?
+      placeholder: |
+        Example: "The student should be added to the activity list"
+        Example: "I should see all Saturday activities"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: How can we see this problem?
+      description: What steps did you take before seeing this issue?
+      placeholder: |
+        1. Go to the activities page
+        2. Click on "Chess Club"
+        3. Enter student email
+        4. Click "Register"
+        5. See error message
+    validations:
+      required: true
+
+  - type: dropdown
+    id: which-page
+    attributes:
+      label: Where did this happen?
+      description: Which page or feature has the problem?
+      options:
+        - Activities list page
+        - Student registration
+        - Teacher login
+        - Filtering activities (by day, time, category)
+        - Activity details
+        - Other / Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      description: Is this a consistent problem?
+      options:
+        - Every time
+        - Sometimes
+        - Only once
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-message
+    attributes:
+      label: Error Message (if any)
+      description: If you saw an error message, what did it say?
+      placeholder: Copy and paste the exact error message here
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information
+      description: Anything else we should know?
+      placeholder: |
+        - Which browser are you using? (Chrome, Firefox, Safari, etc.)
+        - What device are you using? (Computer, tablet, phone)
+        - Screenshots (if helpful)
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### What happens next?
+        Once you submit this form, the Copilot coding agent will:
+        1. Review the bug report
+        2. Investigate the problem
+        3. Fix the issue in the code
+        4. Test the fix to make sure it works
+        
+        We'll update you once the bug is fixed!

@@ -1,0 +1,94 @@
+name: Add New Activity
+description: Request to add a new extracurricular activity to the system
+title: "[Activity] Add new activity: "
+labels: ["enhancement", "activity"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Add a New Activity
+        Please fill out this form to request adding a new extracurricular activity. The more details you provide, the easier it will be to add this activity correctly.
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: What is the name of the new activity?
+      placeholder: e.g., "Cooking Club", "Swimming Team", "Photography Class"
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: Activity Description
+      description: Describe what students will do in this activity
+      placeholder: Provide a brief description of the activity (1-2 sentences)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: activity-days
+    attributes:
+      label: Which days will this activity meet?
+      description: Select all days that apply
+      multiple: true
+      options:
+        - Monday
+        - Tuesday
+        - Wednesday
+        - Thursday
+        - Friday
+        - Saturday
+        - Sunday
+    validations:
+      required: true
+
+  - type: input
+    id: start-time
+    attributes:
+      label: Start Time
+      description: What time does the activity start?
+      placeholder: e.g., "3:15 PM" or "7:00 AM"
+    validations:
+      required: true
+
+  - type: input
+    id: end-time
+    attributes:
+      label: End Time
+      description: What time does the activity end?
+      placeholder: e.g., "5:00 PM" or "8:30 AM"
+    validations:
+      required: true
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum Number of Students
+      description: What is the maximum number of students that can participate?
+      placeholder: e.g., "20"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any other information we should know about this activity?
+      placeholder: Special requirements, equipment needed, room assignments, etc.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### What happens next?
+        Once you submit this form, the Copilot coding agent will:
+        1. Add the new activity to the database
+        2. Make it available on the activities page
+        3. Set up the schedule and participant tracking
+        
+        The activity will be ready for students to sign up!
