@@ -1,0 +1,114 @@
+name: UI/UX Improvement
+description: Suggest improvements to make the website easier to use
+title: "[UI/UX] "
+labels: ["enhancement", "ui-ux"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## UI/UX Improvement Suggestion
+        Help us make the website better! Share your ideas for improvements.
+
+  - type: dropdown
+    id: improvement-area
+    attributes:
+      label: What part of the website needs improvement?
+      description: Select the area you want to improve
+      options:
+        - Activities list display
+        - Filters (search, day, time, category)
+        - Student registration process
+        - Teacher login experience
+        - Colors and styling
+        - Layout and organization
+        - Mobile phone experience
+        - Overall user experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-problem
+    attributes:
+      label: What's difficult or confusing right now?
+      description: Explain the current issue in simple terms
+      placeholder: |
+        Example: "It's hard to find activities on weekends"
+        Example: "The text is too small to read"
+        Example: "I can't tell which students are already registered"
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: How would you like it to work?
+      description: Describe your ideal experience
+      placeholder: |
+        Example: "Add a separate tab for weekend activities"
+        Example: "Make the text larger and use a darker color"
+        Example: "Show a list of registered students for each activity"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: Who will benefit from this improvement?
+      description: Who will this help the most?
+      multiple: true
+      options:
+        - Teachers
+        - Students
+        - Both teachers and students
+        - School administrators
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this improvement?
+      description: How would you rate the priority?
+      options:
+        - Very important - makes the site hard to use without it
+        - Important - would make things much easier
+        - Nice to have - small improvement
+        - Low priority - just an idea
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or References
+      description: Can you provide examples or show similar features from other websites?
+      placeholder: |
+        - Links to similar designs
+        - Screenshots or drawings (if helpful)
+        - Examples from other school systems
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information
+      description: Anything else we should know?
+      placeholder: Any other details, concerns, or ideas related to this improvement
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### What happens next?
+        Once you submit this form, the Copilot coding agent will:
+        1. Review your suggestion
+        2. Consider how to implement the improvement
+        3. Make the necessary changes to the website
+        4. Test the changes to ensure they work well
+        
+        Your feedback helps make the site better for everyone!

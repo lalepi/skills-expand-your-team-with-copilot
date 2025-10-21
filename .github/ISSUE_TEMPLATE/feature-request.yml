@@ -1,0 +1,127 @@
+name: Feature Request
+description: Suggest a new feature or capability for the system
+title: "[Feature] "
+labels: ["enhancement", "feature-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request
+        Have an idea for a new feature? Share it with us!
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: What feature would you like to add?
+      description: Describe the new feature in simple terms
+      placeholder: |
+        Example: "Send email notifications to parents when students sign up"
+        Example: "Allow students to see their own activity schedule"
+        Example: "Create waiting lists for full activities"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-solved
+    attributes:
+      label: What problem does this solve?
+      description: Explain why this feature is needed
+      placeholder: |
+        Example: "Parents need to know when their children join activities"
+        Example: "Students forget which activities they signed up for"
+        Example: "When activities fill up, interested students have no way to join later"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: who-benefits
+    attributes:
+      label: Who will use this feature?
+      description: Select all that apply
+      multiple: true
+      options:
+        - Teachers
+        - Students
+        - Parents
+        - School administrators
+        - Everyone
+    validations:
+      required: true
+
+  - type: textarea
+    id: how-it-works
+    attributes:
+      label: How should it work?
+      description: Describe how you envision this feature working
+      placeholder: |
+        Describe the steps:
+        1. First, the user would...
+        2. Then, the system would...
+        3. Finally, the user would see...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this feature?
+      description: Help us prioritize
+      options:
+        - Critical - needed as soon as possible
+        - High priority - would solve major problems
+        - Medium priority - nice to have
+        - Low priority - interesting idea for future
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current Workaround
+      description: How are you handling this need right now?
+      placeholder: |
+        Example: "Manually sending emails to parents"
+        Example: "Keeping paper lists"
+        Example: "Using a separate spreadsheet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical Considerations
+      description: Any technical details or constraints we should know about?
+      placeholder: |
+        - Integration with existing systems
+        - Data privacy concerns
+        - Performance considerations
+        - Mobile device requirements
+    validations:
+      required: false
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or References
+      description: Any examples from other systems?
+      placeholder: |
+        - Similar features you've seen elsewhere
+        - Screenshots or mockups
+        - Links to reference systems
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### What happens next?
+        Once you submit this form, the Copilot coding agent will:
+        1. Review your feature request
+        2. Plan the implementation approach
+        3. Develop the new feature
+        4. Test it thoroughly
+        5. Deploy it to the system
+        
+        We appreciate your ideas for making the system better!

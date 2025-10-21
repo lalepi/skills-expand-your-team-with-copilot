@@ -1,0 +1,103 @@
+name: Modify Existing Activity
+description: Request to change details of an existing activity (schedule, capacity, description, etc.)
+title: "[Activity] Modify activity: "
+labels: ["enhancement", "activity"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Modify an Existing Activity
+        Use this form to request changes to an existing activity. Only fill in the fields you want to change.
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: Which activity do you want to modify?
+      placeholder: e.g., "Chess Club", "Soccer Team", "Art Club"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: What do you want to change?
+      description: Select what needs to be modified
+      multiple: true
+      options:
+        - Schedule (days or times)
+        - Description
+        - Maximum number of students
+        - Activity name
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: schedule-change
+    attributes:
+      label: Schedule Changes
+      description: If changing the schedule, describe the new days and times
+      placeholder: |
+        Example: "Change from Mondays and Fridays to Tuesdays and Thursdays"
+        Example: "Change time from 3:15 PM - 4:45 PM to 4:00 PM - 5:30 PM"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description-change
+    attributes:
+      label: New Description
+      description: If changing the description, provide the new description
+      placeholder: Enter the new description for the activity
+    validations:
+      required: false
+
+  - type: input
+    id: capacity-change
+    attributes:
+      label: New Maximum Number of Students
+      description: If changing capacity, what should the new maximum be?
+      placeholder: e.g., "25"
+    validations:
+      required: false
+
+  - type: input
+    id: name-change
+    attributes:
+      label: New Activity Name
+      description: If renaming the activity, what should the new name be?
+      placeholder: e.g., "Advanced Chess Club"
+    validations:
+      required: false
+
+  - type: textarea
+    id: other-changes
+    attributes:
+      label: Other Changes
+      description: Describe any other changes needed
+      placeholder: Explain what else needs to be changed
+    validations:
+      required: false
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Changes
+      description: Why are these changes needed?
+      placeholder: e.g., "Room availability changed", "More students interested", "Teacher schedule conflict"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### What happens next?
+        Once you submit this form, the Copilot coding agent will:
+        1. Locate the activity in the database
+        2. Update the requested information
+        3. Ensure all changes are reflected on the website
+        
+        Students will see the updated information immediately!

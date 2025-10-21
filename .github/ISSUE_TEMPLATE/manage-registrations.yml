@@ -1,0 +1,103 @@
+name: Manage Student Registrations
+description: Request to add or remove students from activities
+title: "[Registration] "
+labels: ["registration", "task"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Manage Student Registrations
+        Use this form to request changes to student activity registrations.
+
+  - type: dropdown
+    id: action-type
+    attributes:
+      label: What do you need to do?
+      description: Select the type of registration action
+      options:
+        - Add a student to an activity
+        - Remove a student from an activity
+        - Move a student from one activity to another
+        - Add multiple students to an activity
+        - Other registration task
+    validations:
+      required: true
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: Which activity is this for?
+      placeholder: e.g., "Chess Club", "Soccer Team", "Art Club"
+    validations:
+      required: true
+
+  - type: textarea
+    id: student-emails
+    attributes:
+      label: Student Email(s)
+      description: Provide the student email address(es)
+      placeholder: |
+        For single student: john.smith@mergington.edu
+        For multiple students (one per line):
+        john.smith@mergington.edu
+        jane.doe@mergington.edu
+        alex.johnson@mergington.edu
+    validations:
+      required: true
+
+  - type: input
+    id: target-activity
+    attributes:
+      label: Target Activity (if moving)
+      description: If moving a student, what activity should they be moved to?
+      placeholder: e.g., "Drama Club"
+    validations:
+      required: false
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Change
+      description: Why is this registration change needed?
+      placeholder: |
+        Example: "Student requested to join"
+        Example: "Schedule conflict - student needs to switch activities"
+        Example: "Parent requested removal"
+    validations:
+      required: false
+
+  - type: checkbox
+    id: verify-capacity
+    attributes:
+      label: Capacity Check
+      description: Please confirm
+      options:
+        - label: I have verified that the activity has space for additional students (if adding)
+          required: false
+
+  - type: textarea
+    id: special-instructions
+    attributes:
+      label: Special Instructions
+      description: Any special considerations or requirements?
+      placeholder: |
+        - Student has special accommodations
+        - Needs specific time slot
+        - Part of a group that should be kept together
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### What happens next?
+        Once you submit this form, the Copilot coding agent will:
+        1. Verify the activity exists and has capacity (if adding)
+        2. Process the registration change
+        3. Update the participant lists
+        4. Ensure the changes are reflected in the system
+        
+        The registration changes will be completed automatically!
